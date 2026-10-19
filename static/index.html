@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0f3d2e" />
+    <meta
+      name="description"
+      content="AccessMate helps people understand complex documents, screenshots, and forms in simple language."
+    />
+    <link rel="manifest" href="/static/manifest.webmanifest" />
+    <title>AccessMate</title>
+    <link rel="stylesheet" href="/static/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand" aria-label="AccessMate logo and name">
+          <div class="brand-mark" aria-hidden="true">A</div>
+          <div>
+            <p class="eyebrow">Accessibility AI</p>
+            <h1>AccessMate</h1>
+          </div>
+        </div>
+      </header>
+
+      <main class="app-layout">
+        <section class="card hero-card" aria-labelledby="hero-heading">
+          <p class="eyebrow">Context-aware understanding</p>
+          <h2 id="hero-heading">Turn confusing documents and screens into clear steps.</h2>
+          <p class="supporting-text">
+            Upload a PDF, screenshot, or scanned image and ask what matters most. AccessMate explains the content in plain language and highlights missing or uncertain information.
+          </p>
+
+          <div class="upload-panel">
+            <label class="upload-area" for="file-input" id="upload-label">
+              <input id="file-input" type="file" accept=".pdf,.png,.jpg,.jpeg,.webp" />
+              <span class="upload-title">Upload a document or screenshot</span>
+              <span class="upload-subtitle">PDF, PNG, JPG, WEBP</span>
+            </label>
+          </div>
+
+          <div class="status-row">
+            <span id="status-pill" class="status-pill neutral" aria-live="polite">Waiting for file</span>
+            <span id="file-meta" class="file-meta">No file selected</span>
+          </div>
+
+          <div class="question-panel">
+            <label for="question-input" class="sr-only">Ask a question about the document</label>
+            <textarea id="question-input" rows="4" placeholder="Ask AccessMate: What are the key deadlines? What should I do next?"></textarea>
+            <div class="actions">
+              <button id="analyze-button" class="primary-button" type="button">Explain with AccessMate</button>
+              <button id="read-aloud-button" class="secondary-button" type="button">Read Aloud</button>
+              <button id="stop-speech-button" class="ghost-button" type="button">Stop Speaking</button>
+            </div>
+          </div>
+        </section>
+
+        <section class="card response-card" aria-live="polite" aria-labelledby="response-heading">
+          <div class="response-header">
+            <h3 id="response-heading">AI response</h3>
+            <span id="confidence-tag" class="confidence-tag neutral">Ready</span>
+          </div>
+
+          <div id="processing-indicator" class="processing-indicator hidden">
+            <span class="spinner" aria-hidden="true"></span>
+            <span>AccessMate is processing your document...</span>
+          </div>
+
+          <div id="answer-box" class="answer-box empty">
+            Upload a document and ask a question to see a clear explanation here.
+          </div>
+
+          <ol id="steps-list" class="steps-list" aria-label="Recommended steps"></ol>
+        </section>
+      </main>
+
+      <footer class="privacy-note">
+        <strong>Privacy & safety:</strong> Low-risk tasks may proceed automatically, while consequential or security-sensitive actions pause for human review and explicit approval.
+      </footer>
+    </div>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>

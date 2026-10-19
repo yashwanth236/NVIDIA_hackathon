@@ -1,0 +1,29 @@
+{
+  "manifest_version": 3,
+  "name": "AccessMate Browser Agent",
+  "version": "0.1.0",
+  "description": "Navigate websites with AccessMate while keeping consequential actions under your control.",
+  "permissions": [
+    "activeTab",
+    "permissions",
+    "scripting",
+    "sidePanel"
+  ],
+  "host_permissions": [
+    "http://127.0.0.1:8000/*",
+    "http://localhost:8000/*"
+  ],
+  "optional_host_permissions": [
+    "http://*/*",
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "action": {
+    "default_title": "Open AccessMate Browser Agent"
+  }
+}

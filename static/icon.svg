@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="AccessMate icon">
+  <rect width="128" height="128" rx="28" fill="#0f3d2e"/>
+  <path d="M36 38h56a8 8 0 0 1 8 8v36a8 8 0 0 1-8 8H36a8 8 0 0 1-8-8V46a8 8 0 0 1 8-8zm8 16h40v8H44zm0 14h24v8H44zm0 14h32v8H44z" fill="#fff"/>
+  <circle cx="92" cy="82" r="24" fill="#dfeee8"/>
+  <path d="M87 68h10v28H87zm-6 8h22v8H81zm0 14h30v8H81z" fill="#0f3d2e"/>
+</svg>

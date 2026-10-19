@@ -1,0 +1,17 @@
+{
+  "name": "AccessMate",
+  "short_name": "AccessMate",
+  "description": "AI accessibility assistant for documents, forms, and screenshots.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#edf4ee",
+  "theme_color": "#0f3d2e",
+  "icons": [
+    {
+      "src": "/static/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

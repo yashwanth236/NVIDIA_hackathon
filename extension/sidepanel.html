@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>AccessMate Browser Agent</title>
+    <link rel="stylesheet" href="sidepanel.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow">AccessMate</p>
+        <h1>Browser agent</h1>
+        <p id="site-label" class="site-label">Choose a website tab to begin.</p>
+      </header>
+
+      <section class="privacy-note" aria-label="Privacy and safety">
+        <strong>Privacy &amp; safety</strong>
+        <p>
+          Your goal and visible control labels are sent to your configured NVIDIA NIM endpoint.
+          Other page text and field values are not sent. Do not put passwords or authentication
+          codes in your goal. AccessMate will not fill credential or sensitive-data fields. It
+          pauses before consequential clicks and new-site access.
+        </p>
+      </section>
+
+      <label for="goal">What would you like to do?</label>
+      <textarea id="goal" rows="4" maxlength="1000" placeholder="For example: Find the return policy and explain the steps."></textarea>
+
+      <div class="button-row">
+        <button id="start" class="primary">Start</button>
+        <button id="stop" class="secondary" disabled>Stop</button>
+      </div>
+
+      <section id="approval" class="approval hidden" aria-live="assertive">
+        <h2 id="approval-title">Approval needed</h2>
+        <p id="approval-message"></p>
+        <div class="button-row">
+          <button id="approve" class="primary">Approve once</button>
+          <button id="reject" class="secondary">Reject</button>
+        </div>
+      </section>
+
+      <p id="status" class="status" role="status" aria-live="polite">Ready.</p>
+      <ol id="activity" class="activity" aria-label="Agent activity"></ol>
+    </main>
+    <script src="sidepanel.js"></script>
+  </body>
+</html>
